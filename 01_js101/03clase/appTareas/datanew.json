@@ -1,0 +1,22 @@
+[
+ {
+  "titulo": "Tarea de prueba 3",
+  "estado": "Pendiente"
+ },
+ {
+  "titulo": "Tarea de prueba 4",
+  "estado": "Finalizada"
+ },
+ {
+  "titulo": "Terminar app de tareas.",
+  "estado": "pendiente"
+ },
+ {
+  "titulo": "Repasar temas clase proxima.",
+  "estado": "pendiente"
+ },
+ {
+  "titulo": "Repasar temas nuevos.",
+  "estado": "pendiente"
+ }
+]

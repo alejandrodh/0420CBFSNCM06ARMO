@@ -1,0 +1,28 @@
+/* Estilo Principal 
+Escribir los selecetores de elementosd que queremos modificar ***************************************************/
+
+/* Selectores de etiqueta */
+h1 {
+    color: red;
+}
+p{
+    color: green;
+    font-size: 19px;
+}
+.destacado{
+    color: #444;
+    font-size: 25px;
+}
+#segundo{
+    color: blueviolet;
+}
+li {
+    color: pink;
+}
+.interna li{
+  font-size: 12px;
+  color:orange;
+}
+h1{
+    color: violet;
+}

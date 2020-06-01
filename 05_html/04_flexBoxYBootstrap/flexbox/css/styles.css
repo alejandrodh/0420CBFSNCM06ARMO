@@ -1,0 +1,33 @@
+/* Flexbox */
+*{
+    box-sizing: border-box;
+}
+
+.wrapper{
+    background-color: #dcdcdc;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+article{
+    width: 200px;
+    height: 150px;
+}
+.uno{
+    background-color: rgba(0,0,255,0.5);
+}
+.dos{
+    background-color: rgba(0,255,0,0.5);
+}
+.tres{
+    background-color: rgba(255,0,0,0.5);
+}
+
+@media(min-width:768px){
+    .wrapper{
+        flex-direction: row;
+    }
+}

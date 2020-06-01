@@ -1,0 +1,19 @@
+{
+  "name": "prueba-http-clase",
+  "version": "1.0.0",
+  "description": "Pruebas de clase con http y node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "fullstack"
+  ],
+  "author": "AJV",
+  "license": "ISC",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
