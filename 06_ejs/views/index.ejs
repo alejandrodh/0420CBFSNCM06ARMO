@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/head') %> 
+<body>
+    <h1>Home con ¡ejs!</h1>
+    <p>Usuario: <%= nombre %> </p>
+    <img src="" alt="">
+
+    <h2>Lista de alumnos</h2>
+    <ul>
+        <% alumnos.forEach(function(alumno){ %>
+            <li> <%= alumno %> </li>
+        <% }) %>
+    </ul>
+
+
+</body>
+</html>
