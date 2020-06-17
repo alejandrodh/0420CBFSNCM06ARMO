@@ -10,7 +10,8 @@ const homeController = {
             alumnos: alumnos,
         }
 
-        return res.render('index', variablesACompartir );          
+        // return res.render('index', variablesACompartir );          
+        return res.sendFileSync(__dirname + '/../views/index.html')
     }
 
 }
