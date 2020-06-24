@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const { body } = require('express-validator');
 
 // ************ Controller Require ************
 const registerController = require('../controllers/registerController');
@@ -22,7 +23,18 @@ let upload = multer({ storage: storage })
 
 
 router.get('/', registerController.create); 
-router.post('/', upload.single('image'),registerController.store); 
+router.post('/', upload.single('image'), [
+    body('email')
+        .notEmpty()
+        .withMessage('El campo email es obligatorio'),
+    body('password')
+        .notEmpty()
+        .withMessage('El campo contraseña es obligatorio')
+        .bail()
+        .isLength({ min: 4 })
+        .withMessage('El campo contraseña debe tener al menos 4 caracteres'),
+
+] ,registerController.store); 
 
 
 module.exports = router;

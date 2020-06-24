@@ -14,6 +14,7 @@
                 <h2 class="products-title">Registro</h2>
             </div>
             <div class="col-6">
+                
                 <form action="/register" method="POST" enctype="multipart/form-data">
                     <div class="row product-detail">
                         <div class="col-12">
@@ -27,12 +28,22 @@
                             <label for="email" class="form-label">Email: *</label>
                             <input type="text" id="email" name="email" placeholder="Ej: gonza@dh.com" class="form-input" value="">
                             <p class="error">
+                                <% if (typeof errors != 'undefined' ) { %>
+                                    <% if (errors.email) { %>
+                                        <%= errors.email.msg %>
+                                     <% } %>
+                                <% } %>
+                                <!-- si la variable errors está, 
+                                revisar si hay error del campo : imprimimos el error de email /Sino imprimimos el dato vacío. -->
                             </p>
                         </div>
                         <div class="col-12">
                             <label for="password" class="form-label">Contraseña: *</label>
                             <input type="password" id="password" name="password" class="form-input" value="">
                             <p class="error">
+                                <% if (typeof errors != 'undefined' ) { %>
+                                    <%= errors.password ? errors.password.msg : ''%>
+                                <% } %>
                             </p>
                         </div>
                         <div class="col-12">
@@ -57,6 +68,7 @@
                         </div>
                     </div>
                 </form>
+                
                 <div class="g-signin2 mt-5" data-onsuccess="onSignIn"></div>
             </div>
         </div>

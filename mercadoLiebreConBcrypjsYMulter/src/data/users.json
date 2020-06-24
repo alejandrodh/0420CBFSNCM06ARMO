@@ -32,5 +32,12 @@
   "email": "ale@dh.com",
   "password": "$2a$10$tVQgDKnlq2eF8/62HRcieeZw1OSqQEZphk6aF4/jP2yjuC3OO5eJS",
   "image": "image-1592406527927.jpg"
+ },
+ {
+  "id": "",
+  "username": "martin",
+  "email": "martin@dh.com",
+  "password": "$2a$10$7cLnC8olitjndqBfZ92jV.KXfqCPUpQqEtlffWbXKpWekgpZ/MtjW",
+  "image": "image-1593006783989.jpg"
  }
 ]
