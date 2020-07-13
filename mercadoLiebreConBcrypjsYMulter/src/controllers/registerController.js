@@ -35,8 +35,8 @@ const controller = {
                 return res.redirect('/');
             } else {
                 //Mandamos los mensajes de error al usuario
-                console.log(errors.errors);
-                // return res.send(errors.mapped()); //Debug
+                    // console.log(errors.errors);
+                    // return res.send(errors.mapped()); //Debug
                 return res.render('users/register', { errors : errors.mapped() })
             }
             
