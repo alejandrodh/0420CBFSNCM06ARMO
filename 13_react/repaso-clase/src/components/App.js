@@ -1,5 +1,7 @@
 import React from 'react';
-import Card from './Card';
+// import Card from './Card';
+import Character from './Character';
+import Product from "./Product";
 
 const characters = [
   {
@@ -24,25 +26,59 @@ const characters = [
   },
 ]
 
+const products = [
+  {
+    img: "",
+    name: "Zapatillas",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea fuga obcaecati eius consectetur doloribus quasi, saepe culpa illo facere a quibusdam expedita dolor rerum dolores molestiae? Fugit ratione iste dolorem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat pariatur voluptates omnis eaque mollitia eligendi molestiae quasi blanditiis necessitatibus accusantium deserunt adipisci, maiores tempore, facilis dicta non ipsam explicabo illo?",
+    url: "/products/23",
+  },
+  {
+    img: "",
+    name: "Remera",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea fuga obcaecati eius consectetur doloribus quasi, saepe culpa illo facere a quibusdam expedita dolor rerum dolores molestiae? Fugit ratione iste dolorem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat pariatur voluptates omnis eaque mollitia eligendi molestiae quasi blanditiis necessitatibus accusantium deserunt adipisci, maiores tempore, facilis dicta non ipsam explicabo illo?",
+    url: "/products/23",
+  },
+  {
+    img: "",
+    name: "Pantalón",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea fuga obcaecati eius consectetur doloribus quasi, saepe culpa illo facere a quibusdam expedita dolor rerum dolores molestiae? Fugit ratione iste dolorem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat pariatur voluptates omnis eaque mollitia eligendi molestiae quasi blanditiis necessitatibus accusantium deserunt adipisci, maiores tempore, facilis dicta non ipsam explicabo illo?",
+    url: "/products/23",
+  },
+  
+];
+
 
 function App() {
   return (
     <div className="container">
       <h1> Primera app con react</h1>
-      <div className="row"> 
-        {
-          characters.map(function(character, idx){
-            return (
-              <div className="col-3" key={ idx }>
-                <Card characterInfo= {character}/>
-              </div>
-              )  
-          })
-        }
-        
+      <div className="row">
+        {characters.map(function (character, idx) {
+          return (
+            <div className="col-6" key={idx}>
+              <Character characterInfo={character}>
+                <p>Este párrafo está fuera del componente</p>
+                <i>Etiqueta i</i>
+              </Character>
+
+            </div>
+          );
+        })}
+      </div>
+      <div className="row">
+        {products.map(function (product, idx) {
+          return (
+            <div className="col-4" key={idx}>
+              <Product productInfo={product} />
+            </div>
+          );
+        })}
       </div>
     </div>
-      
   );
 }
 
