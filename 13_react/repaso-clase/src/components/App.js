@@ -2,6 +2,9 @@ import React from 'react';
 // import Card from './Card';
 import Character from './Character';
 import Product from "./Product";
+import ButtonStateFull from './ButtonStateFull';
+import Counter from './Counter';
+import RickMorty from './RickMorty';
 
 const characters = [
   {
@@ -56,6 +59,11 @@ function App() {
   return (
     <div className="container">
       <h1> Primera app con react</h1>
+      <div className="row mb-4">
+        <RickMorty />
+      </div>
+      <ButtonStateFull />
+      <Counter />
       <div className="row">
         {characters.map(function (character, idx) {
           return (
@@ -64,7 +72,6 @@ function App() {
                 <p>Este párrafo está fuera del componente</p>
                 <i>Etiqueta i</i>
               </Character>
-
             </div>
           );
         })}

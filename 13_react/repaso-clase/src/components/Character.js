@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 function Character (props){
-    console.log(props)
+    // console.log(props)
 
     return (
       <React.Fragment>
